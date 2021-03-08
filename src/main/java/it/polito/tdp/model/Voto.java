@@ -30,6 +30,31 @@ public class Voto
 	{
 		return String.format("Esame \"%s\" superato con %d in data %s", nomeCorso, voto, dataSuperamentoEsame);
 	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{		
+		if(!(obj instanceof Voto))
+			return false;
+		else
+		{
+			Voto altroVoto = (Voto)obj;
+			if(this.nomeCorso.toLowerCase().equals(altroVoto.nomeCorso.toLowerCase()) && this.voto == altroVoto.voto)
+				return true;
+			else
+				return false;
+		}
+		/* oppure:
+		if(	obj instanceof Voto && 
+			((Voto)obj).voto == this.voto &&
+			((Voto)obj).nomeCorso.toLowerCase().equals(this.nomeCorso.toLowerCase()) )
+			return true;
+		else
+			return false;
+		*/
+	}
+	
+	
 
 	public int getVoto()
 	{

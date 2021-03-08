@@ -10,6 +10,7 @@ public class TestLibretto
 		System.out.println("Test metodi Libretto\n");
 		Libretto libretto = new Libretto();
 		
+		//1
 		Voto voto1 = new Voto("Analisi I", 30, LocalDate.of(2019, 2, 15));
 		libretto.add(voto1);
 		
@@ -24,14 +25,26 @@ public class TestLibretto
 		libretto.add(new Voto("Chimica", 25, LocalDate.of(2019, 2, 3)));
 		libretto.add(new Voto("Programmazione ad oggetti", 28, LocalDate.of(2021, 1, 25)));
 		
+		System.out.println("Libretto:");
 		System.out.println(libretto);
-		System.out.println();
+		
+		//2
+		System.out.println("\nLista esami con voto 25:");
 		List<Voto> listaVenticinque = libretto.getListaVotiUgualiA(25);
 		System.out.println(listaVenticinque);
-		System.out.println();
 
+		System.out.println("\nLibretto esami con voto 25:");
 		Libretto librettoVenticinque = libretto.getLibrettoConVotiUgualiA(25);
 		System.out.println(librettoVenticinque);
+		
+		//3
+		System.out.println("\nCerca esame \"Tecniche di Programmazione\":");
+		Voto esameTecnicheDiProgrammazione = libretto.cercaVotoCorso("Tecniche di Programmazione");
+		System.out.println(esameTecnicheDiProgrammazione);
+
+		//4
+		
+		
 		
 	}
 
