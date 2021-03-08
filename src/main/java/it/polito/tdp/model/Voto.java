@@ -31,6 +31,16 @@ public class Voto
 		return String.format("Esame \"%s\" superato con %d in data %s", nomeCorso, voto, dataSuperamentoEsame);
 	}
 
+	public int getVoto()
+	{
+		return this.voto;
+	}
+	
+	public String getNomeCorso()
+	{
+		return this.nomeCorso;
+	}
+
 	
 	
 	
