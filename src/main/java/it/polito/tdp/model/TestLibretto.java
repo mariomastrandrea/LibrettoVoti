@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class TestLibretto
-{
+{	
 	public static void main(String[] args)
 	{
 		System.out.println("Test metodi Libretto\n");
@@ -43,9 +43,7 @@ public class TestLibretto
 		System.out.println(esameTecnicheDiProgrammazione);
 
 		//4
-		
-		
-		
+				
 	}
 
 }
