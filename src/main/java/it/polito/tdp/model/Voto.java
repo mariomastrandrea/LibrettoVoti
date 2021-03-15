@@ -24,6 +24,9 @@ public class Voto
 		this.dataSuperamentoEsame = dataSuperamentoEsame;
 	}
 
+	public int getVoto() { return this.voto; }	
+	public String getNomeCorso() { return this.nomeCorso; }
+	public LocalDate getData() { return this.dataSuperamentoEsame; }
 
 	@Override
 	public String toString()
@@ -31,41 +34,39 @@ public class Voto
 		return String.format("Esame \"%s\" superato con %d in data %s", nomeCorso, voto, dataSuperamentoEsame);
 	}
 	
+	/*
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((nomeCorso == null) ? 0 : nomeCorso.hashCode());
+		return result;
+	}
+
+
 	@Override
 	public boolean equals(Object obj)
-	{		
-		if(!(obj instanceof Voto))
+	{
+		if(this == obj)
+			return true;
+		if(obj == null)
 			return false;
-		else
+		if(getClass() != obj.getClass())
+			return false;
+		Voto other = (Voto) obj;
+		if(nomeCorso == null)
 		{
-			Voto altroVoto = (Voto)obj;
-			if(this.nomeCorso.toLowerCase().equals(altroVoto.nomeCorso.toLowerCase()) && this.voto == altroVoto.voto)
-				return true;
-			else
+			if(other.nomeCorso != null)
 				return false;
 		}
-		/* oppure:
-		if(	obj instanceof Voto && 
-			((Voto)obj).voto == this.voto &&
-			((Voto)obj).nomeCorso.toLowerCase().equals(this.nomeCorso.toLowerCase()) )
-			return true;
-		else
+		else if(!nomeCorso.equals(other.nomeCorso))
 			return false;
-		*/
+		return true;
 	}
-	
-	
+*/
 
-	public int getVoto()
-	{
-		return this.voto;
-	}
 	
-	public String getNomeCorso()
-	{
-		return this.nomeCorso;
-	}
-
 	
 	
 	

@@ -1,5 +1,6 @@
 package it.polito.tdp.librettovoti;
 
+import it.polito.tdp.model.Libretto;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +14,12 @@ public class EntryPoint extends Application
     @Override
     public void start(Stage stage) throws Exception 
     {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene_Libretto.fxml"));
+        Parent root = loader.load();
+        FXMLController controller = loader.getController();       
+        
+        Libretto librettoModel = new Libretto();
+        controller.setModel(librettoModel);
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
