@@ -3,6 +3,7 @@ package it.polito.tdp.model;
 import java.time.LocalDate;
 import java.util.List;
 
+
 public class TestLibretto
 {	
 	public static void main(String[] args)
