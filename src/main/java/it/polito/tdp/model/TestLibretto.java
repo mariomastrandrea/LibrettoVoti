@@ -1,8 +1,7 @@
 package it.polito.tdp.model;
 
-import java.time.LocalDate;
+import java.time.*;
 import java.util.List;
-
 
 public class TestLibretto
 {	
@@ -57,6 +56,21 @@ public class TestLibretto
 		if(libretto.esisteDuplicato(analisiDoppione))
 			System.out.println("Voto gia' presente: " + libretto.cercaVotoCorso(chimicaConflitto.getNomeCorso()));
 		System.out.println();
-	}
-
+	}	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
